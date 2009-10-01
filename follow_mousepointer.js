@@ -26,7 +26,7 @@ function draw() {
 
       // determine collisions with already moved object
       var col = false;
-      for (var j = 0; j < len; ++j) {
+      for (var j = 0; j < i; ++j) {
         if (i == j) { continue; }
         if (collision(followers[j], new_pos)) {
           col = true;
@@ -85,6 +85,6 @@ Event.observe(window, 'load', function() {
     elem.style.top  = (Math.random() * viewport.height) + "px"
     });
   setInterval(draw, draw_interval);
-  setInterval(shuffle, shuffle_interval);
+  // setInterval(shuffle, shuffle_interval);
 });
 
